@@ -1,5 +1,7 @@
 1.Created a simple friends list website where each user can login  and store their friends information and perform actions like edit,delete,update his details
 
+*(tried to use carrierwave,minimagic gem for photo uploading and resising but was not working)
+
 2.Used devise gem for user authenication setup and sqlite3 database.
 
 
