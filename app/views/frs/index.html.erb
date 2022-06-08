@@ -1,0 +1,67 @@
+
+<% if user_signed_in? %>
+
+      
+    <div class="container-xl">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8 center">
+                            <h2>Friends <b>List</b></h2>
+                            <br>
+                        </div>
+
+                    </div>
+                    <table class="table table-striped table-hover table-bordered my-6" id="myTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>email</th>
+                                <th>Phone</th>
+                                <th>Insta_id </th>
+                                <th></th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                        
+                          <% @frs.each do |fr| %>
+        <% if fr.user == current_user %>
+        <tr>
+          <td>
+<%= link_to fr.first_name + ' ' + fr.last_name, fr ,style: "color:blue"%>
+
+
+          </td>
+          
+          <td><%= fr.email %></td>
+          <td><%= fr.phone %></td>
+          <td><%= fr.insta_id %></td>
+          
+          
+          
+          
+          
+          <td><%= button_to 'Delete', fr, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+          
+        </tr>
+        <% end %>
+      <% end %> 
+                    
+                        </tbody>
+                    </table>
+                    
+            </div>
+        </div>
+     <br/>
+<%= link_to 'New Friend', new_fr_path, class:"btn btn-secondary" %>
+<% else %>
+<div class="container c my-4">
+<h1 class="mx-5">Hello</h1>
+<h2>This is my first Rails Webpage...
+<%= image_tag "1.jpg", style:"float:left;width:50%;height:100%" %></h2>
+<h2 class="h">About</h2>
+<%= image_tag "2.jpg", style:"float:right;width:350px;height:550px;padding:5px" %>
+<% end %>

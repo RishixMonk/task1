@@ -1,0 +1,21 @@
+<div class=" container my-4 jumbotron">
+  <h1 class="display-4">
+    <%= @fr.first_name %>
+    <%= @fr.last_name %>
+  </h1>
+  <p class="lead">
+    <%= @fr.email %>  | 
+    <%= @fr.phone %>  |  
+    <%= @fr.insta_id %>
+
+  </p>
+  <br/>
+
+  <%= link_to 'Edit', edit_fr_path(@fr), class:"btn btn-secondary" %>
+  <br/>
+ <br/>
+<%= button_to 'Delete', @fr, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+   <br/>
+<%= link_to 'Back',frs_path, class:"btn btn-dark" %>
+
+</div>
