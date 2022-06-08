@@ -150,6 +150,7 @@
   } 
   .h{
     text-align: center;
+    text-shadow: 5px 5px 5px #ff0000;
   }
   .myLC {
     position: relative;
