@@ -1,4 +1,4 @@
-1.Created a simple friends list website where each user can login into and store their friends information and perform actions like edit,delete,update his details
+1.Created a simple friends list website where each user can login  and store their friends information and perform actions like edit,delete,update his details
 
 2.Used devise gem for user authenication setup and sqlite3 database.
 
